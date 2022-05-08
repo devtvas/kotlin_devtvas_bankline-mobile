@@ -28,6 +28,7 @@ class BankStatementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        binding.rvBankStatement.layoutManager = LinearLayoutManager(this)
 //        Log.d("TESTE", "Chegou o Id: ${accountHolder.id}")
         finfBankStatement()
     }
