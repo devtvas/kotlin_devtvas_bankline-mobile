@@ -3,9 +3,12 @@ package br.com.devtvas.bankline.ui.statement
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.devtvas.bankline.R
 import br.com.devtvas.bankline.databinding.ActivityBankStatementBinding
 import br.com.devtvas.bankline.domain.Correntista
+import br.com.devtvas.bankline.domain.Movimentacao
+import br.com.devtvas.bankline.domain.TipoMovimentacao
 import java.lang.IllegalArgumentException
 
 class BankStatementActivity : AppCompatActivity() {
