@@ -28,6 +28,19 @@ class BankStatementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        Log.d("TESTE", "Chegou o Id: ${accountHolder.id}")
+//        Log.d("TESTE", "Chegou o Id: ${accountHolder.id}")
+        finfBankStatement()
+    }
+// dados mockados
+    private fun finfBankStatement() {
+        val dataSet = ArrayList<Movimentacao>()
+        dataSet.add(Movimentacao(1,"03/05/2022","Lorem Ipsum",  1000.0,TipoMovimentacao.RECEITA,1))
+        dataSet.add(Movimentacao(1,"03/05/2022","Lorem Ipsum",  1000.0,TipoMovimentacao.DESPESA,1))
+        dataSet.add(Movimentacao(1,"03/05/2022","Lorem Ipsum",  1000.0,TipoMovimentacao.RECEITA,1))
+        dataSet.add(Movimentacao(1,"03/05/2022","Lorem Ipsum",  1000.0,TipoMovimentacao.DESPESA,1))
+        dataSet.add(Movimentacao(1,"03/05/2022","Lorem Ipsum",  1000.0,TipoMovimentacao.RECEITA,1))
+        dataSet.add(Movimentacao(1,"03/05/2022","Lorem Ipsum",  1000.0,TipoMovimentacao.RECEITA,1))
+        dataSet.add(Movimentacao(1,"03/05/2022","Lorem Ipsum",  1000.0,TipoMovimentacao.RECEITA,1))
+        binding.rvBankStatement.adapter = BankStatementAdapter(dataSet)
     }
 }
